@@ -1,3 +1,31 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
+
+@layer base {
+	table {
+		font-size: var(--text-sm);
+	}
+
+	th,
+	td {
+		max-width: 37rem;
+		padding: 0.5rem 0.7rem;
+		text-align: start;
+		vertical-align: text-top;
+	}
+
+	tr {
+		border-bottom: 1px solid var(--color-slate-300);
+	}
+
+	input {
+		border: none;
+		min-width: 0;
+
+		&[type="number"] {
+			padding: 0;
+			font-size: inherit;
+		}
+	}
+}
